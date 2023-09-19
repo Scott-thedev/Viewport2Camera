@@ -4,8 +4,6 @@
 
 The **Viewport to Camera** addon for Blender allows you to quickly convert the current 3D viewport into a camera. It simplifies the process of creating a camera with the same view location and rotation as the viewport, making it easier to capture the current view for your projects.
 
-![Demo](demo.gif)
-
 ## Installation
 
 1. Download the latest release of the addon from the [Releases](https://github.com/yourusername/viewport2camera/releases) page.
@@ -17,13 +15,13 @@ The **Viewport to Camera** addon for Blender allows you to quickly convert the c
 ## Usage
 
 1. Open Blender and navigate to the 3D viewport.
-2. Press `Shift + A` to open the "Add" menu.
-3. Under "Mesh," you'll find the "Viewport to Camera" option.
+2. click on the "Tools" tab in the sidebar 
+3. at the bottom of the panel you'll find the "Viewport to Camera" option.
 4. Click on it to create a camera that matches the viewport's view location and rotation.
 
 ## License
 
-This addon is licensed under the [MIT License](LICENSE).
+This addon is licensed under the GPLV3 License.
 
 ## Contributing
 
@@ -31,11 +29,7 @@ Contributions are welcome! If you have any ideas, bug reports, or feature reques
 
 ## Credits
 
-This addon was developed by [Your Name](https://github.com/yourusername).
-
-## Support
-
-If you encounter any issues or need assistance with the addon, feel free to reach out to us on the [GitHub Issues](https://github.com/yourusername/viewport2camera/issues) page.
+This addon was developed by Scott Clayton(https://github.com/scottclayton22).
 
 ## Acknowledgments
 
