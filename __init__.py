@@ -35,6 +35,7 @@ class VIEW3D_PT_ViewportCamera(bpy.types.Panel):
         
         # Buttons to create viewport camera and set the latest camera active
         layout.operator("object.create_viewport_camera", text="Create Viewport Camera")
+        layout.operator("object.set_latest_camera_active", text="Set Latest Camera Active")
 
 class OBJECT_OT_CreateViewportCamera(bpy.types.Operator):
     bl_idname = "object.create_viewport_camera"
@@ -59,23 +60,22 @@ class OBJECT_OT_CreateViewportCamera(bpy.types.Operator):
         new_camera.rotation_euler = rotation
         
         # Set the "is_latest_camera" property to true for the new camera
-        #new_camera["is_latest_camera"] = True
+        new_camera["is_latest_camera"] = True
         
         return {'FINISHED'}
 
-
-#class OBJECT_OT_SetLatestCameraActive(bpy.types.Operator):
-#    bl_idname = "object.set_latest_camera_active"
-#    bl_label = "Set Latest Camera Active"
+class OBJECT_OT_SetLatestCameraActive(bpy.types.Operator):
+    bl_idname = "object.set_latest_camera_active"
+    bl_label = "Set Latest Camera Active"
     
-#    def execute(self, context):
-#        # Set the most recently created camera with the custom property as the active camera
-#        for obj in bpy.context.scene.objects:
-#            if obj.type == 'CAMERA' and obj.get("is_latest_camera"):
-#                bpy.context.scene.camera = obj
-#                break
+    def execute(self, context):
+        # Set the most recently created camera with the custom property as the active camera
+        for obj in bpy.context.scene.objects:
+            if obj.type == 'CAMERA' and obj.get("is_latest_camera"):
+                bpy.context.scene.camera = obj
+                break
         
-#        return {'FINISHED'}
+        return {'FINISHED'}
 
 def register():
     bpy.utils.register_class(VIEW3D_PT_ViewportCamera)
