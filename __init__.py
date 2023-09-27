@@ -12,7 +12,7 @@ class VIEW3D_PT_ViewportCamera(bpy.types.Panel):
     bl_idname = "VIEW3D_PT_Viewport2Camera"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'Tool'
+    bl_category = 'Viewport2Camera'
     
     def draw(self, context):
         layout = self.layout
